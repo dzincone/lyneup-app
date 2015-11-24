@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+// Get User
 router.get("/user", function(req, res, next){
   var name = req.query.name
   dataApi.getUser(name).then(function(user){
